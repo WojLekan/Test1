@@ -32,7 +32,15 @@ add_new(ewidencja, "Abacki", 21, 7400)
 add_new(ewidencja, "Babacki", 35, 4000)
 add_new(ewidencja, "Cabacki", 60, 9200)
 
-print_all(ewidencja)
+print_all(ewidencja)     
+
+
+
+
+##
+##
+###
+##
 
 print(salary_avg(ewidencja))
 print(salary_min_max(ewidencja))
