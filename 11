@@ -1,0 +1,11 @@
+import random
+
+count = 0
+guess = 0
+
+while guess != 7:
+	count += 1
+	guess = random.randint(1,12)
+	print(guess)
+
+print("After " + str(count) + " attempt(s), program has guessed 7!")
