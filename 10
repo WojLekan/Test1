@@ -1,0 +1,38 @@
+def add_new(ew, name, age, salary):
+	"""dodaje nowego pracownika do ewidencji"""
+	ew.append({"name": name, "age": age, "salary": salary})
+
+def print_all(ew):
+	"""drukuje ewidencje"""
+	print(ew)
+
+def salary_avg(ew):
+	"""zwraca średnie zarobki"""
+	count = 0
+	salary_sum = 0
+
+	for i in ew:
+		count += 1
+		salary_sum += i['salary']
+	return salary_sum/count
+
+def salary_min_max(ew):
+	"""zwraca minimalne i maksymalne zarobki"""
+	sal_list = []
+	for i in ew:
+		sal_list.append(i["salary"])
+	sal_list_s=sal_list.sorted()
+	max_salary = sal_list_s[-1]
+	min_salary = sal_list_s[0]
+	return (min_salary, max_salary)
+
+ewidencja = []
+
+add_new(ewidencja, "Abacki", 21, 7400)
+add_new(ewidencja, "Babacki", 35, 4000)
+add_new(ewidencja, "Cabacki", 60, 9200)
+
+print_all(ewidencja)
+
+print(salary_avg(ewidencja))
+print(salary_min_max(ewidencja))
